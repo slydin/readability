@@ -11,29 +11,27 @@ From here you'll be prompted on the cmd line on your desired news outlet and sub
 
 APIs
 =====
-Currently Used API:
-------------------
-www.npr.org/api/index
+Currently Used APIs:
+- www.npr.org/api/index
 
 Failed usage of these APIs:
---------------------------n
-developer.nytimes.com
-apiportal.washingtonpost.com
-developer.usatoday.com
+- [developer.nytimes.com](developer.nytimes.com)
+- [apiportal.washingtonpost.com](apiportal.washingtonpost.com)
+- [developer.usatoday.com](developer.usatoday.com)
 
 Most of the apis are pending due to the lack of access to the full article. The above api only allows at most a snippet and/or a url. The usage of a web scraper is not viable for news articles as these news outlets typically have limits to article views for non-subscribed users. 
 
 Currently Available Topics
 ==========================
 *In no particular order*
--Science
--Economy
--US 
--World
--Politics
--Education
--Technology
--Business
+- Science
+- Economy
+- US 
+- World
+- Politics
+- Education
+- Technology
+- Business
 
 NPR topic ids can be found here: http://www.npr.org/api/mappingCodes.php . Just add the topic id to the News class dictionary NPR_TOPIC_IDS. 
 
