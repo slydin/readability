@@ -1,45 +1,51 @@
-Readability
-====================
+Intro
+=====
+A readability metric identifier for news articles. Article text is retrieved via respective news outlets' api. Ten articles on the desired subject are retrieved to be measured and their aggregate score for each measure is printed out.  
 
-A collection of functions that measure the readability of a given body of text. I'd
-recommend checking out the wikipedia articles below--most of the metrics estimate 
-the grade level required to comprehend a given block of text and may return odd results
-on small snippets of text.
+Howto
+=====
+Be sure to first sign up to the appropriate news outlet to retrieve your api key.
+	$cd readability
+	$python newsreader.py
+From here you'll be prompted on the cmd line on your desired news outlet and subsequently on your desired topic. The program will then retrieve 10 of the latest articles in that subject and print out the readability scores. 
 
-To get up and running you'll need [NLTK](http://nltk.org/) and will need the punkt
-data set:
+APIs
+=====
+Currently Used API:
+------------------
+www.npr.org/api/index
 
-    shell$ pip install nltk
-    shell$ python
-    >>import nltk
-    >>nltk.download('punkt')
+Failed usage of these APIs:
+--------------------------n
+developer.nytimes.com
+apiportal.washingtonpost.com
+developer.usatoday.com
 
-Demo:
+Most of the apis are pending due to the lack of access to the full article. The above api only allows at most a snippet and/or a url. The usage of a web scraper is not viable for news articles as these news outlets typically have limits to article views for non-subscribed users. 
 
-    shell$ python readability.py
-    Test text:
-    "We are close to wrapping up our 10 week Rails Course. This week we will cover a handful of topics commonly encountered in Rails projects. We then wrap up with part 2 of our Reddit on Rails exercise!  By now you should be hard at work on your personal projects. The students in the course just presented in front of the class with some live demos and a brief intro to to the problems their app were solving. Maybe set aside some time this week to show someone your progress, block off 5 minutes and describe what goal you are working towards, the current state of the project (is it almost done, just getting started, needs UI, etc.), and then show them a quick demo of the app. Explain what type of feedback you are looking for (conceptual, design, usability, etc.) and see what they have to say.  As we are wrapping up the course you need to be focused on learning as much as you can, but also making sure you have the tools to succeed after the class is over."
+Currently Available Topics
+==========================
+*In no particular order*
+-Science
+-Economy
+-US 
+-World
+-Politics
+-Education
+-Technology
+-Business
 
-    ARI:  7.2164516129
-    FleschReadingEase:  88.9553
-    FleschKincaidGradeLevel:  5.3235
-    GunningFogIndex:  9.1355
-    SMOGIndex:  8.19615242271
-    ColemanLiauIndex:  6.7804
-    LIX:  35.2666666667
-    RIX:  3.1
+NPR topic ids can be found here: http://www.npr.org/api/mappingCodes.php . Just add the topic id to the News class dictionary NPR_TOPIC_IDS. 
 
-The following readability metrics are included in readability.py:
-
-1. http://en.wikipedia.org/wiki/Automated_Readability_Index
-2. http://en.wikipedia.org/wiki/SMOG
-3. http://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_Grade_Level#Flesch.E2.80.93Kincaid_Grade_Level
-4. http://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_test#Flesch_Reading_Ease
-5. http://en.wikipedia.org/wiki/Coleman-Liau_Index
-6. http://en.wikipedia.org/wiki/Gunning-Fog_Index
-
-Largely lifted from:
-
-    https://github.com/nltk/nltk_contrib/tree/master/nltk_contrib/readability
-
-SMOG index appears to perform most accurately.
+Acknowledgements
+-https://github.com/mmautner/readability 
+-https://github.com/nltk/nltk_contrib/tree/master/nltk_contrib/readability
+	
+The links to each measures' descriptions as posted in mmautner's readme are as follows:
+-http://en.wikipedia.org/wiki/Automated_Readability_Index
+-http://en.wikipedia.org/wiki/SMOG
+-http://en.wikipedia.org/wiki/Flesch%E2%80
+93Kincaid_Grade_Level#Flesch.E2.80.93Kincaid_Grade_Level
+-http://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_test#Flesch_Reading_Ease
+-http://en.wikipedia.org/wiki/Coleman-Liau_Index
+-http://en.wikipedia.org/wiki/Gunning-Fog_Index
