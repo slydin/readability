@@ -37,7 +37,7 @@ class News:
 			if topic.lower() in News.NPR_TOPIC_IDS.keys():
 				self.uri += "&id=" + News.NPR_TOPIC_IDS[topic.lower()]
 				return
-			else
+			else:
 				print("Topic not available")
 				sys.exit(1)
 
