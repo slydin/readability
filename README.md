@@ -36,14 +36,13 @@ Currently Available Topics
 NPR topic ids can be found here: http://www.npr.org/api/mappingCodes.php . Just add the topic id to the News class dictionary NPR_TOPIC_IDS. 
 
 Acknowledgements
--https://github.com/mmautner/readability 
--https://github.com/nltk/nltk_contrib/tree/master/nltk_contrib/readability
+- https://github.com/mmautner/readability 
+- https://github.com/nltk/nltk_contrib/tree/master/nltk_contrib/readability
 	
 The links to each measures' descriptions as posted in mmautner's readme are as follows:
--http://en.wikipedia.org/wiki/Automated_Readability_Index
--http://en.wikipedia.org/wiki/SMOG
--http://en.wikipedia.org/wiki/Flesch%E2%80
-93Kincaid_Grade_Level#Flesch.E2.80.93Kincaid_Grade_Level
--http://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_test#Flesch_Reading_Ease
--http://en.wikipedia.org/wiki/Coleman-Liau_Index
--http://en.wikipedia.org/wiki/Gunning-Fog_Index
+- http://en.wikipedia.org/wiki/Automated_Readability_Index
+- http://en.wikipedia.org/wiki/SMOG
+- http://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_Grade_Level#Flesch.E2.80.93Kincaid_Grade_Level
+- http://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_test#Flesch_Reading_Ease
+- http://en.wikipedia.org/wiki/Coleman-Liau_Index
+- http://en.wikipedia.org/wiki/Gunning-Fog_Index
